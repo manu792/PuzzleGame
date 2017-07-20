@@ -23,6 +23,18 @@ td {
 }
 #moves-count {
     font-size: 1.3em;
-    display: block;
     margin-top: 20px;
 }
+.clickable{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.moves-counter-hidden{
+    display: none;
+}
+
+.moves-counter-visible{
+    display: block;
+}
+

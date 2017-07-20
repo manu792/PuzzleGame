@@ -38,6 +38,7 @@
                       $(this).removeClass('blank');
                       $(this).text(tile);
                   }
+                  $(this).removeClass('clickable');
               }
             );
 
@@ -52,12 +53,13 @@
                 selector += ", #slot-" + movableSlots[i];
             }
             selector = selector.substring(2);  // Strip off the leading ", ".
-            $(selector).wrapInner('<a href="#"></a>');
+            //$(selector).wrapInner('<a href="#"></a>');
+            $(selector).addClass('clickable');
         },
 
         makeMove: function (tile) {
 
-            var idNum = $(tile).parent().attr('id').substring(5);
+            var idNum = $(tile).attr('id').substring(5);
             var tileValue = board.state[idNum];
             board.state[idNum] = 0;
             board.state[board.blankSlot] = tileValue;
@@ -68,9 +70,9 @@
 
         setSlotHandler: function () {
 
-            $('td').on('click', 'a',
+            $('td').on('click',
               function (event, shuffling) {
-                  if (board.hasBeenShuffled) {
+                  if (board.hasBeenShuffled && $(this).hasClass('clickable')) {
                       board.makeMove(this);
                       // While shuffling, don't check for whether the game is finished
                       if (!shuffling) {
@@ -109,6 +111,9 @@
                   board.moves = -1;
                   board.hasBeenShuffled = true;
 
+                  $('#moves-count').removeClass('moves-counter-hidden');
+                  $('#moves-count').addClass('moves-counter-visible');
+
                   // Make a bunch of random moves to do the shuffling
                   // by simulating user clicks on the tiles.
 
@@ -120,7 +125,7 @@
                       var whichTile = Math.floor(Math.random() * movableTiles.length);
                       var tileIdNum = 'slot-' + movableTiles[whichTile];
 
-                      var selector = '#' + tileIdNum + ' a';
+                      var selector = '#' + tileIdNum;
                       $(selector).trigger('click', [true]);
                   }
 
