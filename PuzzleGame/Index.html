@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>15 puzzle game</title>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Style/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1> This is our 15 puzzle game!</h1>
+                <p>This game is played by changing the order of the tiles until you get the tile numbers in order from 1-15 with the blank tile last</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                <table id="puzzle-table" border="1">
+                    <tr>
+                        <td id="slot-0">1</td>
+                        <td id="slot-1">2</td>
+                        <td id="slot-2">3</td>
+                        <td id="slot-3">4</td>
+                    </tr>
+                    <tr>
+                        <td id="slot-4">5</td>
+                        <td id="slot-5">6</td>
+                        <td id="slot-6">7</td>
+                        <td id="slot-7">8</td>
+                    </tr>
+                    <tr>
+                        <td id="slot-8">9</td>
+                        <td id="slot-9">10</td>
+                        <td id="slot-10">11</td>
+                        <td id="slot-11">12</td>
+                    </tr>
+                    <tr>
+                        <td id="slot-12">13</td>
+                        <td id="slot-13">14</td>
+                        <td id="slot-14">15</td>
+                        <td id="slot-15">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <button id="shuffle-board">Shuffle board</button>
+                <label id="moves-count"></label>
+            </div>
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Scripts/puzzle.js"></script>
+</body>
+</html>
