@@ -98,8 +98,7 @@
         },
 
         userWon: function () {
-
-            alert('You win!');
+            alert('You win!!');
         },
 
         setShuffleHandler: function () {
