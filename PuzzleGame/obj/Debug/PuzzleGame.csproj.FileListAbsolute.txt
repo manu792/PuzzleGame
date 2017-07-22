@@ -3,4 +3,3 @@ c:\users\manuel.roman\documents\visual studio 2015\Projects\PuzzleGame\PuzzleGam
 c:\users\manuel.roman\documents\visual studio 2015\Projects\PuzzleGame\PuzzleGame\bin\PuzzleGame.pdb
 c:\users\manuel.roman\documents\visual studio 2015\Projects\PuzzleGame\PuzzleGame\obj\Debug\PuzzleGame.dll
 c:\users\manuel.roman\documents\visual studio 2015\Projects\PuzzleGame\PuzzleGame\obj\Debug\PuzzleGame.pdb
-c:\users\manuel.roman\documents\visual studio 2015\Projects\PuzzleGame\PuzzleGame\obj\Debug\PuzzleGame.csprojResolveAssemblyReference.cache

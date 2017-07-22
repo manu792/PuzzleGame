@@ -144,10 +144,10 @@
         incrementMoves: function(){
             //Increment moves by one
             board.moves++;
-            $('#moves-count').text('Moves: ' + board.moves);
+            $('#moves-count').text('Movimientos: ' + board.moves);
         },
 
-        removeTextDecoration: function(){
+        removeTextDecoration: function() {
             $('td').each(
               function removeTextDecorationTd() {
                   $('.clickable').addClass('initial-setup');
