@@ -38,6 +38,7 @@
                       $(this).removeClass('blank');
                       $(this).text(tile);
                   }
+                  $(this).removeClass('initial-setup');
                   $(this).removeClass('clickable');
               }
             );
@@ -149,11 +150,7 @@
         removeTextDecoration: function(){
             $('td').each(
               function removeTextDecorationTd() {
-                  $('.clickable').css({
-                      'color': '#333',
-                      'background-color': 'white',
-                      'cursor': 'text'
-                  });
+                  $('.clickable').addClass('initial-setup');
               }
             );
         }
