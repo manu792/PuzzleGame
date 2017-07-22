@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>15 puzzle game</title>
+    <title>Sliding Puzzle</title>
     <meta charset="UTF-8">
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Style/Site.css" rel="stylesheet" />
@@ -10,48 +10,67 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <h1> This is our 15 puzzle game!</h1>
-                <p>This game is played by changing the order of the tiles until you get the tile numbers in order from 1-15 with the blank tile last</p>
+                <h1>Bienvenido al juego Sliding Puzzle</h1>
+                <p>Para ganar este juego debes ordenar los numeros del 1 al 15 con el cuadro vacio en la ultima casilla</p>
+                <h2 id="open-modal" class="btn btn-info">Ver Ejemplo</h2>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-                <table id="puzzle-table" border="1">
-                    <tr>
-                        <td id="slot-0"></td>
-                        <td id="slot-1"></td>
-                        <td id="slot-2"></td>
-                        <td id="slot-3"></td>
-                    </tr>
-                    <tr>
-                        <td id="slot-4"></td>
-                        <td id="slot-5"></td>
-                        <td id="slot-6"></td>
-                        <td id="slot-7"></td>
-                    </tr>
-                    <tr>
-                        <td id="slot-8"></td>
-                        <td id="slot-9"></td>
-                        <td id="slot-10"></td>
-                        <td id="slot-11"></td>
-                    </tr>
-                    <tr>
-                        <td id="slot-12"></td>
-                        <td id="slot-13"></td>
-                        <td id="slot-14"></td>
-                        <td id="slot-15"></td>
-                    </tr>
-                </table>
+        <!-- Help Modal -->
+        <div id="modal" class="modalWrapper">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                    <div class="modal-content">
+                        <span id="modal-close" class="close">&times;</span>
+                        <div class="information">
+                            <h3>Para ganar este juego debes ordenar los numeros del 1 al 15 con el cuadro vacio en la ultima casilla</h3>
+                            <h2>Ejemplo:</h2>
+                            <img class="modal-example" src="Images/solution.PNG" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <button id="shuffle-board" class="btn btn-success">Shuffle board</button>
-                <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                        <label id="moves-count" class="badge moves-counter-hidden"></label>
+        <div class="main">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                    <table id="puzzle">
+                        <tr>
+                            <td id="slot-0"></td>
+                            <td id="slot-1"></td>
+                            <td id="slot-2"></td>
+                            <td id="slot-3"></td>
+                        </tr>
+                        <tr>
+                            <td id="slot-4"></td>
+                            <td id="slot-5"></td>
+                            <td id="slot-6"></td>
+                            <td id="slot-7"></td>
+                        </tr>
+                        <tr>
+                            <td id="slot-8"></td>
+                            <td id="slot-9"></td>
+                            <td id="slot-10"></td>
+                            <td id="slot-11"></td>
+                        </tr>
+                        <tr>
+                            <td id="slot-12"></td>
+                            <td id="slot-13"></td>
+                            <td id="slot-14"></td>
+                            <td id="slot-15"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <button id="shuffle-board" class="btn btn-success">Nuevo Juego</button>
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <label id="moves-count" class="badge moves-counter-hidden"></label>
+                        </div>
                     </div>
                 </div>
             </div>

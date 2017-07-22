@@ -69,7 +69,6 @@
         },
 
         setSlotHandler: function () {
-
             $('td').on('click',
               function (event, shuffling) {
                   if (board.hasBeenShuffled && $(this).hasClass('clickable')) {
@@ -87,6 +86,16 @@
             );
         },
 
+        setModalHandlers: function(){
+            $('#open-modal').on('click', function () {
+                $('#modal').show();
+            });
+
+            $('#modal-close').on('click', function () {
+                $('#modal').hide();
+            });
+        },
+
         isGameFinished: function () {
 
             for (var i = 0; i < board.state.length; i++) {
@@ -98,13 +107,11 @@
         },
 
         userWon: function () {
-            alert('You win!');
+            alert('Has ganado en ' + board.moves + ' movimientos!');
         },
 
         setShuffleHandler: function () {
-
             $('#shuffle-board').on('click',
-
               function shuffleTheBoard() {
                   // Initialize moves to 0
                   board.moves = -1;
@@ -142,9 +149,9 @@
         removeTextDecoration: function(){
             $('td').each(
               function removeTextDecorationTd() {
-                  $('td a').css({
+                  $('.clickable').css({
                       'color': '#333',
-                      'text-decoration': 'none',
+                      'background-color': 'white',
                       'cursor': 'text'
                   });
               }
@@ -156,5 +163,6 @@
     $(board.renderTiles);
     $(board.setSlotHandler);
     $(board.setShuffleHandler);
+    $(board.setModalHandlers);
     $(board.removeTextDecoration);
 })();
